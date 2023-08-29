@@ -1,5 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import createRoot from 'react-dom';
+
+import './index.css';
+
+import { books } from './books';
+import Book from './Book';
+
+
+
 
 
 /* const Greetingv2 = () => {
@@ -41,36 +50,60 @@ const Greetingv3 = () => {
   return   React.createElement('h1' , {} , 'hello world')
 }
 */
+/*function ParcBook(){
+    booksDim.forEach(Book) => {
+       return (
+         props.
+       );
+    }
+}*/
+
+/*function BookList2() {
+
+
+   return (
+         <section className='booklist'>
+           {books.map((book, index) => {
+            return  (
+                  <Book key={book.id} {...book}></Book>
+            );
+           })}
+         </section>
+   );
+}*/
 
 
 function BookList() {
+
+
    return (
-         <section>
-            <Book></Book>
-            <Book></Book>
-            <Book></Book>
-            <Book></Book>
-            <Book></Book>
-            <Book></Book>
-            <Book></Book>
+         <section className='booklist'>
+           {books.map((book, index) => {
+            return  (
+                  <Book key={book.id} book={book}></Book>
+            );
+           })}
          </section>
    );
 }
 
-const Book = () => {
-   return <article>
-      <Image></Image>
-      <Title></Title>
-      <Author></Author>
-   </article>
-};
 
-const Image = () => <img src='https://m.media-amazon.com/images/I/818K2QDCZvL._AC_UY218_.jpg' alt=''></img>
 
-const Title = () => <h1> This is a title</h1>
+const Image = () => {
 
-const Author = () => <h2> This is an author</h2>
+}
+
+
+const Title = () => {
+
+}
+
+const Author = () => {
+
+}
 
 ReactDOM.render(<BookList/>,document.getElementById('root'));
 
-//21 next
+//createRoot.render(<BookList/>,document.getElementById('root'));
+
+
